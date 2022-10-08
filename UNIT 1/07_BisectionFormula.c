@@ -6,17 +6,22 @@ double function(double x){
 }
 
 int main(){
-    double a = 0, b = 0;
+    double a, b;
 
-    for (int i = 0; i < 10; i++){
-        if (function(i) > 0 && i > b){
-            b = i;
+    for (int i = -5; i <= 5; i++){
+        a = i;
+        b = i+1;
+        if (function(a)*function(b) < 0){
             break;
         }
-        else if (function(i) < 0 && i > a){
-            a = i;
-        }
     }
+
+/*
+    printf("Enter the value of a: ");
+    scanf("%lf",&a);
+    printf("Enter the value of b: ");
+    scanf("%lf",&b);
+*/
 
     printf("a = %lf , b = %lf\n", a,b);
     

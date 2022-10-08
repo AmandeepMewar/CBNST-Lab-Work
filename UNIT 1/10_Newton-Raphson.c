@@ -2,11 +2,15 @@
 #include <math.h>
 
 double function(double x){
-    return (x*x*x*x - x - 10);
+    //return x*tan(x)+1;
+    return x*x*x - 3*x -5;
+    //return x*sin(x) + cos(x);
 }
 
 double derivative(double x){
-    return (4*x*x*x - 1);
+    //return tan(x)+x*(1/(cos(x)*cos(x)));
+    return 3*x*x - 3;
+    //return x*cos(x);
 }
 
 double ex(double x){
@@ -14,17 +18,22 @@ double ex(double x){
 }
 
 int main(){
-    double a = 0, b = 0;
+    double a, b;
 
-    for (int i = 0; i < 10; i++){
-        if (function(i) > 0 && i > b){
-            b = i;
+    for (int i = 0; i <= 5; i++){
+        a = i;
+        b = i+1;
+        if (function(a)*function(b) < 0){
             break;
         }
-        else if (function(i) < 0 && i > a){
-            a = i;
-        }
     }
+
+/*
+    printf("Enter the value of a: ");
+    scanf("%lf",&a);
+    printf("Enter the value of b: ");
+    scanf("%lf",&b);
+*/
 
     printf("a : %lf ,  b : %lf\n", a, b);
 

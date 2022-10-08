@@ -1,24 +1,34 @@
 #include <stdio.h>
 #include <math.h>
+#define e 2.71828182
 
 double function(double x){
     return x*x*x-2*x-5;
+    //return x*x*x - x*x - 2;
+    //return x*x - log(x) -12;
+    //return x*pow(e,x)-3;
+    //return x*pow(e,x) - cos(x);
+    //return x*pow(e,x) - sin(x);
 }
 
 int main(){
-    double a= 0;
-    double b = 0;
+    double a, b;
 
-    for (int i = 0; i < 10; i++){
-        if (function(i) > 0 && i > b){
-            b = i;
+    for (int i = -5; i <= 5; i++){
+        a = i;
+        b = i+1;
+        if (function(a)*function(b) < 0){
             break;
         }
-        else if (function(i) < 0 && i > a){
-            a = i;
-        }
     }
-    
+
+/*
+    printf("Enter the value of a: ");
+    scanf("%lf",&a);
+    printf("Enter the value of b: ");
+    scanf("%lf",&b);
+*/
+
     printf("a : %lf, b : %lf\n",a,b);
 
     double fx, fa, fb, x, x1;
