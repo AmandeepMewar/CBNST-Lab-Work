@@ -1,2 +1,2 @@
-.exe
-UNIT/.exe
+*.exe
+UNIT 1/*.exe
