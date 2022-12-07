@@ -3,18 +3,19 @@
 #define e 2.71828182
 
 double function(double x){
-    return x*x*x-2*x-5;
+    //return x*x*x-2*x-5;
     //return x*x*x - x*x - 2;
     //return x*x - log(x) -12;
     //return x*pow(e,x)-3;
     //return x*pow(e,x) - cos(x);
     //return x*pow(e,x) - sin(x);
+    return x*x - log(x) - 12;
 }
 
 int main(){
     double a, b;
 
-    for (int i = -5; i <= 5; i++){
+    for (int i = 1; i <= 5; i++){
         a = i;
         b = i+1;
         if (function(a)*function(b) < 0){

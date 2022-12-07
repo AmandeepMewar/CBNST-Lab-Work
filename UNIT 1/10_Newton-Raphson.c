@@ -3,13 +3,15 @@
 
 double function(double x){
     //return x*tan(x)+1;
-    return x*x*x - 3*x -5;
+    return x*x - 4* sin(x);
+    //return x*x*x - 3*x -5;
     //return x*sin(x) + cos(x);
 }
 
 double derivative(double x){
     //return tan(x)+x*(1/(cos(x)*cos(x)));
-    return 3*x*x - 3;
+    return 2*x - 4*cos(x);
+    //return 3*x*x - 3;
     //return x*cos(x);
 }
 
@@ -20,7 +22,7 @@ double ex(double x){
 int main(){
     double a, b;
 
-    for (int i = 0; i <= 5; i++){
+    for (int i = 1; i <= 5; i++){
         a = i;
         b = i+1;
         if (function(a)*function(b) < 0){
